@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="定义： parent(超类)        child(子类)parent   p;child  c;p = new child();   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️c = new parent();  //error! 由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转">
+<meta name="description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类与对象（多态）">
-<meta property="og:url" content="https://Paranoia.github.io/2017/11/29/类与对象（多态）/index.html">
+<meta property="og:title" content="类与对象（抽象类）">
+<meta property="og:url" content="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/index.html">
 <meta property="og:site_name" content="Paranoia">
-<meta property="og:description" content="定义： parent(超类)        child(子类)parent   p;child  c;p = new child();   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️c = new parent();  //error! 由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：if(p   instanceof  child){">
+<meta property="og:description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器） ～建议尽量将通用的域和方法放在超类（不管是否为抽象）～定义XX的一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-29T13:11:03.000Z">
+<meta property="og:updated_time" content="2017-11-29T14:28:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类与对象（多态）">
-<meta name="twitter:description" content="定义： parent(超类)        child(子类)parent   p;child  c;p = new child();   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️c = new parent();  //error! 由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：if(p   instanceof  child){">
+<meta name="twitter:title" content="类与对象（抽象类）">
+<meta name="twitter:description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器） ～建议尽量将通用的域和方法放在超类（不管是否为抽象）～定义XX的一个">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://Paranoia.github.io/2017/11/29/类与对象（多态）/"/>
+  <link rel="canonical" href="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/"/>
 
 
 
 
 
-  <title>类与对象（多态） | Paranoia</title>
+  <title>类与对象（抽象类） | Paranoia</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Paranoia.github.io/2017/11/29/类与对象（多态）/">
+    <link itemprop="mainEntityOfPage" href="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Paranoia">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">类与对象（多态）</h1>
+          <h1 class="post-title" itemprop="name headline">类与对象（抽象类）</h1>
         
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-29T20:17:36+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-29T22:16:05+08:00">
                 2017-11-29
               </time>
             
@@ -299,9 +299,9 @@
       
 
       
-        <p>定义： parent(超类)        child(子类)<br>parent   p;<br>child  c;<br>p = new child(<strong>);   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️<br>c = new parent(</strong>);  //error!</p>
-<p>由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：<br>if(p   instanceof  child){      //instanceof用来判断内存中实际对象A是不是B类型（即A = new B()）,返回值为boolean<br>   child  ch =  (child) p;<br>}</p>
-<p>如1⃣️所示，使用多态也会使超类变量在子类中改变语义， 所以在类前加上final则不允许此类扩展（即生成子类），当然就不会在子类中改变语义的风险了。</p>
+        <p>在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）<br>如： public  abstract  class  XX{}</p>
+<p>注意：  抽象类无法被实例化（即调用构造器）。<br>如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器）</p>
+<p>～建议尽量将通用的域和方法放在超类（不管是否为抽象）<br>～定义XX的一个实例B，则B不能允许调用未在XX中声明的方法！</p>
 
       
     </div>
@@ -326,15 +326,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/29/类与对象（多态）/" rel="next" title="类与对象（多态）">
+                <i class="fa fa-chevron-left"></i> 类与对象（多态）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/29/类与对象（抽象类）/" rel="prev" title="类与对象（抽象类）">
-                类与对象（抽象类） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
