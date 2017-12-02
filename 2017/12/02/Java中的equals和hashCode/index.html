@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Paranoia">
 <meta property="og:description" content="原身：hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。重写：这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-02T09:52:53.000Z">
+<meta property="og:updated_time" content="2017-12-02T09:55:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中的equals和hashCode">
 <meta name="twitter:description" content="原身：hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。重写：这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象">
@@ -299,7 +299,7 @@
       
 
       
-        <p><strong>原身：</strong><br>hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。<br><strong>重写：</strong><br>这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象的hashCode也不是内存地址的反应，而是通过对String的value计算得到一个int值来做hashCode()结果。<em>\</em>如果重新定义equals方法，就必须重新定义hashCode方法，以便用户可以将对象插入到hashTable中。__</p>
+        <p><strong>原身：</strong><br>hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。<br><strong>重写：</strong><br>这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象的hashCode也不是内存地址的反应，而是通过对String的value计算得到一个int值来做hashCode()结果。<strong>_如果重新定义equals方法，就必须重新定义hashCode方法，以便用户可以将对象插入到hashTable中。</strong></p>
 
       
     </div>
