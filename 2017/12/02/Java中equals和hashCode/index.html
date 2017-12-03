@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Paranoia">
 <meta property="og:description" content="原身：hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。重写：这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-02T11:05:06.000Z">
+<meta property="og:updated_time" content="2017-12-03T04:08:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中equals和hashCode">
 <meta name="twitter:description" content="原身：hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。重写：这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象">
@@ -190,6 +190,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -272,6 +282,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -299,7 +331,7 @@
       
 
       
-        <p><strong>原身：</strong><br>hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。<br><strong>重写：</strong><br>这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象的hashCode也不是内存地址的反应，而是通过对String的value计算得到一个int值来做hashCode()结果。<strong>如果重新定义equals方法，就必须重新定义hashCode方法，以便用户可以将对象插入到hashTable中。</strong></p>
+        <p><strong>原身：</strong><br>hashCode是由对象导出的一个整形值，在万类之祖Object类中hashCode是this类的内存地址转换为的int值。equals在Object中是this.obj和other.obj的内存地址是否相同。<br><strong>重写：</strong><br>这两个方法在Object子类中都可以重写，一般都一起重写。比如众所周知的String中equals()方法就是比较内容，而不是比较this == obj。相同的，String对象的hashCode也不是内存地址的反应，而是通过对String的value计算得到一个int值来做hashCode()结果。__如果重新定义equals方法，就必须重新定义hashCode方法，以便用户可以将对象插入到hashTable中。__</p>
 
       
     </div>
@@ -324,8 +356,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/02/Java小笔记/" rel="next" title="Java小笔记">
-                <i class="fa fa-chevron-left"></i> Java小笔记
+              <a href="/2017/12/02/Java小知识点/" rel="next" title="Java小知识点">
+                <i class="fa fa-chevron-left"></i> Java小知识点
               </a>
             
           </div>
@@ -410,6 +442,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             

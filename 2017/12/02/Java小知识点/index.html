@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调">
+<meta name="description" content="ArrayList\&amp;lt;&amp;gt;的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。 插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。 比较两个包装器对象时用equals,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类与对象（抽象类）">
-<meta property="og:url" content="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/index.html">
+<meta property="og:title" content="Java小知识点">
+<meta property="og:url" content="https://Paranoia.github.io/2017/12/02/Java小知识点/index.html">
 <meta property="og:site_name" content="Paranoia">
-<meta property="og:description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器） ～建议尽量将通用的域和方法放在超类（不管是否为抽象）～定义XX的一个">
+<meta property="og:description" content="ArrayList\&amp;lt;&amp;gt;的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。 插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。 比较两个包装器对象时用equals,比较两个枚举类型用= =, 枚举类型本质上其实就是一个类，枚举中的常量都是该枚举类型的实例。定义枚举">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-29T14:28:08.000Z">
+<meta property="og:updated_time" content="2017-12-03T04:07:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类与对象（抽象类）">
-<meta name="twitter:description" content="在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）如： public  abstract  class  XX{} 注意：  抽象类无法被实例化（即调用构造器）。如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器） ～建议尽量将通用的域和方法放在超类（不管是否为抽象）～定义XX的一个">
+<meta name="twitter:title" content="Java小知识点">
+<meta name="twitter:description" content="ArrayList\&amp;lt;&amp;gt;的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。 插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。 比较两个包装器对象时用equals,比较两个枚举类型用= =, 枚举类型本质上其实就是一个类，枚举中的常量都是该枚举类型的实例。定义枚举">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/"/>
+  <link rel="canonical" href="https://Paranoia.github.io/2017/12/02/Java小知识点/"/>
 
 
 
 
 
-  <title>类与对象（抽象类） | Paranoia</title>
+  <title>Java小知识点 | Paranoia</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Paranoia.github.io/2017/11/29/类与对象（抽象类）/">
+    <link itemprop="mainEntityOfPage" href="https://Paranoia.github.io/2017/12/02/Java小知识点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小倪同学">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">类与对象（抽象类）</h1>
+          <h1 class="post-title" itemprop="name headline">Java小知识点</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-29T22:16:05+08:00">
-                2017-11-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T18:57:40+08:00">
+                2017-12-02
               </time>
             
 
@@ -281,6 +281,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -309,9 +331,12 @@
       
 
       
-        <p>在public后加上abstract代表抽象，拥有至少一个抽象方法的类叫做抽象类（也必须加上abstract）<br>如： public  abstract  class  XX{}</p>
-<p>注意：  抽象类无法被实例化（即调用构造器）。<br>如：XX  A;  /   XX[]  A = new  XX[2];  就不是实例化（因为没有调用构造器）</p>
-<p>～建议尽量将通用的域和方法放在超类（不管是否为抽象）<br>～定义XX的一个实例B，则B不能允许调用未在XX中声明的方法！</p>
+        <ol>
+<li>ArrayList\&lt;>的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。</li>
+<li>插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。</li>
+<li>比较两个包装器对象时用equals,比较两个枚举类型用= =,</li>
+<li>枚举类型本质上其实就是一个类，枚举中的常量都是该枚举类型的实例。定义枚举类格式，enum  XX  {  }。</li>
+</ol>
 
       
     </div>
@@ -336,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/29/类与对象（多态）/" rel="next" title="类与对象（多态）">
-                <i class="fa fa-chevron-left"></i> 类与对象（多态）
+              <a href="/2017/11/30/英语四级笔记(2)/" rel="next" title="英语四级笔记(2)">
+                <i class="fa fa-chevron-left"></i> 英语四级笔记(2)
               </a>
             
           </div>
@@ -346,8 +371,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/30/英语四级笔记（1）/" rel="prev" title="英语四级笔记（1）">
-                英语四级笔记（1） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/02/Java中equals和hashCode/" rel="prev" title="Java中equals和hashCode">
+                Java中equals和hashCode <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
