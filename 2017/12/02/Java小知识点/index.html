@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Paranoia">
 <meta property="og:description" content="ArrayList\&amp;lt;&amp;gt;的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。 插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。 比较两个包装器对象时用equals,比较两个枚举类型用= =, 枚举类型本质上其实就是一个类，枚举中的常量都是该枚举类型的实例。定义枚举">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-06T08:26:35.000Z">
+<meta property="og:updated_time" content="2018-02-21T09:43:08.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java小知识点">
 <meta name="twitter:description" content="ArrayList\&amp;lt;&amp;gt;的菱形括号中必须为完全引用类型。且放入和插入都使用add()，计算长度用size()，set()替换，get()取出。 插入e到第i位置，可以理解为把第i+1个元素到最后一个元素都往后移一个位置，再把e放到原先第i+1元素的位置。 比较两个包装器对象时用equals,比较两个枚举类型用= =, 枚举类型本质上其实就是一个类，枚举中的常量都是该枚举类型的实例。定义枚举">
@@ -331,6 +331,7 @@
 <li>类中的静态成员和方法属于类域，其它属于实例域</li>
 <li>弱类型、强类型、动态类型、静态类型语言的区别：强类型：偏向于不容忍隐式类型转换。譬如说haskell的int就不能变成double；弱类型：偏向于容忍隐式类型转换。譬如说C语言的int可以变成double；静态类型：编译的时候就知道每一个变量的类型，因为类型错误而不能做的事情是语法错误。；动态类型：编译的时候不知道每一个变量的类型，因为类型错误而不能做的事情是运行时错误。譬如说你不能对一个数字a写a<a href="">10</a>当数组用。</li>
 <li>匿名类形式为：父类或父接口new X =  父类或父接口()  {类的主体}。假如只创建这个类的一个对象，就不必为这个类命名，这种类就成为了匿名类。使用匿名内部类的目的：想在这个地点有点什么特殊实现。匿名内部类就是重写父类或接口的方法。匿名类没有名字用的是父类的名字，它只有代码体。</li>
+<li>编译器是把源程序的每一条语句都编译成机器语言,并保存成二进制文件,这样运行时计算机可以直接以机器语言来运行此程序,速度很快;<br>而解释器则是只在执行程序时,才一条一条的解释成机器语言给计算机来执行,所以运行速度是不如编译后的程序运行的快的.</li>
 </ol>
 
       
@@ -492,7 +493,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
