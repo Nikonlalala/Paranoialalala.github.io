@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Paranoia">
 <meta property="og:description" content="定义： parent(超类)        child(子类)parent   p;child  c;p = new child(**);   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️c = new parent(**);  //error! 由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：if(p   instanceof  chil">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-06T10:58:21.000Z">
+<meta property="og:updated_time" content="2018-03-05T14:28:02.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类与对象（多态）">
 <meta name="twitter:description" content="定义： parent(超类)        child(子类)parent   p;child  c;p = new child(**);   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️c = new parent(**);  //error! 由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：if(p   instanceof  chil">
@@ -322,8 +322,7 @@
 
       
         <p>定义： parent(超类)        child(子类)<br>parent   p;<br>child  c;<br>p = new child(**);   // 讲一个子类引用赋给一个超类变量，编译器允许，1⃣️<br>c = new parent(**);  //error!</p>
-<p>由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：<br>if(p   instanceof  child){      //instanceof用来判断内存中实际对象A是不是B类型（即A = new B()）,返回值为boolean<br>   child  ch =  (child) p;<br>}</p>
-<p>如1⃣️所示，使用多态也会使超类变量在子类中改变语义， 所以在类前加上final则不允许此类扩展（即生成子类），当然就不会在子类中改变语义的风险了。</p>
+<p>由上述可知，将一个超类的引用赋值给一个子类变量不允许，必须经过类型转换（由上至下），转换如下：<br>if(p   instanceof  child){      //instanceof用来判断内存中实际对象A是不是B类型（即A = new B()）,返回值为boolean<br>   child  ch =  (child) p;<br>}<br>1   运算符是双目运算符,左面的操作元是一个对象,右面是一个类.当<br>2   * 左面的对象是右面的类创建的对象时,该运算符运算的结果是true,否则是false<br>1   运算符是双目运算符,左面的操作元是一个对象,右面是一个类.当<br>2   * 左面的对象是右面的类创建的对象时,该运算符运算的结果是true,否则是false<br>1    运算符是双目运算符,左面的操作元是一个对象,右面是一个类.当<br>2    *左面的对象是右面的类创建的对象时,该运算符运算的结果是true,否则是false<br>如1⃣️所示，使用多态也会使超类变量在子类中改变语义， 所以在类前加上final则不允许此类扩展（即生成子类），当然就不会在子类中改变语义的风险了。</p>
 
       
     </div>
