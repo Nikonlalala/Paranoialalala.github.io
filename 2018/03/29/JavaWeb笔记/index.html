@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现The reference ">
+<meta name="description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现__The referenc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Paranoia">
 <meta property="og:url" content="https://Paranoia.github.io/2018/03/29/JavaWeb笔记/index.html">
 <meta property="og:site_name" content="Paranoia">
-<meta property="og:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现The reference to entity “useSSL” must end with the ‘;’  d">
+<meta property="og:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现__The reference to entity “useSSL” must end with the ‘;’">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-29T02:21:52.061Z">
+<meta property="og:updated_time" content="2018-03-29T15:45:32.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paranoia">
-<meta name="twitter:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现The reference to entity “useSSL” must end with the ‘;’  d">
+<meta name="twitter:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现__The reference to entity “useSSL” must end with the ‘;’">
 
 
 
@@ -302,7 +302,8 @@
         <hr>
 <p>title: JavaWeb<br>date: 2018-03-29 10:12:12<br>tags:<br>categories: Java<br>—</p>
 <ol>
-<li>当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;连接出现<strong>The reference to entity “useSSL” must end with the ‘;’  delimiter.</strong>错误。 解决办法：我的解决办法：在url中的字符“&amp;”后面加上字符“amp;”(注意amp后面有分号)，这里的”&amp;”为转义字符，其实就是‘&amp;’，原因：xml文件中有些特殊字符是被禁止的，而‘&amp;’就是其中一个，如果要想使用它，需要用到它的转义字符”&amp;”</li>
+<li>当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;连接出现__The reference to entity “useSSL” must end with the ‘;’  delimiter.__错误。 解决办法：我的解决办法：在url中的字符“&amp;”后面加上字符“amp;”(注意amp后面有分号)，这里的”&amp;”为转义字符，其实就是‘&amp;’，原因：xml文件中有些特殊字符是被禁止的，而‘&amp;’就是其中一个，如果要想使用它，需要用到它的转义字符”&amp;”</li>
+<li>java.sql.SQLException: Cannot create com.bookstore.domain.Music:<br> 报这个异常原因是没有给  Music 类提供无参的构造器，事实上要提供无参和有参的两个构造器。</li>
 </ol>
 
       
