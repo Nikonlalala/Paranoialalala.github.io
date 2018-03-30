@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Paranoia">
 <meta property="og:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现__The reference to entity “useSSL” must end with the ‘;’">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-29T15:45:32.221Z">
+<meta property="og:updated_time" content="2018-03-30T07:57:02.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paranoia">
 <meta name="twitter:description" content="title: JavaWebdate: 2018-03-29 10:12:12tags:categories: Java—  当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;amp;连接出现__The reference to entity “useSSL” must end with the ‘;’">
@@ -304,6 +304,7 @@
 <ol>
 <li>当向sql中存入中文数据时变成??? ，于是在jdbcUrl后面加上characterEncoding=utf8和useSSL=false用&amp;连接出现__The reference to entity “useSSL” must end with the ‘;’  delimiter.__错误。 解决办法：我的解决办法：在url中的字符“&amp;”后面加上字符“amp;”(注意amp后面有分号)，这里的”&amp;”为转义字符，其实就是‘&amp;’，原因：xml文件中有些特殊字符是被禁止的，而‘&amp;’就是其中一个，如果要想使用它，需要用到它的转义字符”&amp;”</li>
 <li>java.sql.SQLException: Cannot create com.bookstore.domain.Music:<br> 报这个异常原因是没有给  Music 类提供无参的构造器，事实上要提供无参和有参的两个构造器。</li>
+<li>通过request对象从请求中读取内容时遇到的乱码问题也可分为两种情况<br>　　1.POST方式<br>　　　　POST方式下，存在一个缓冲区，用来将请求体中的内容由字节流通过指定编码解码为字符流，默认情况下缓冲区的默认编码为ISO-8859-1，要解决乱码问题，只需通过request.setCharacterEncoding(“utf-8”); 方法将缓冲区编码指定为UTF-8即可。<br>　　2.GET方式<br>　　　　由于在GET方式下，需要传递的内容直接存在于请求头的url后，数据的编码一般为UTF-8，而url的默认编码为ISO-8859-1，一般来说有三种方式可以解决中文乱码问题。<br>　　　　(修改配置文件中uri的编码方式)<br>　　　　解决方案一：修改tomcat/conf/server.xml<br>　　　　　　　　\<connector port="80" protocol="HTTP/1.1" 　　　　　　　　connectiontimeout="20000" 　　　　　　　　redirectport="8443" uriencoding="utf-8" \=""><br>　　　　(获取乱码内容后通过ISO-8859-1编码表反向查出原始数据，再通过UTF-8码表查出正确内容)<br>　　　　解决方案二：逆向编解码<br>　　　　　　　　username = URLEncoder.encode(username, “ISO8859-1”);<br>　　　　　　　　username = URLDecoder.decode(username, “utf-8”);<br>　　　　解决方案三：简写的方式（推荐使用）<br>　　　　　username = new String(username.getBytes(“ISO-8859-1”),”utf-8”);</connector></li>
 </ol>
 
       
